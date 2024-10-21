@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Toggle Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            height: 400px;
+            width: 100%;
+            display: flex;
+        }
+        #content {
+            
+            justify-content: center;
+            align-items: center;
+            display: none; /* Initially hidden */
+            padding: 20px;
+            background-color: lightblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="slideToggleBtn">Slide Toggle</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <button id="slideDownBtn">Slide Down</button>
+
+    <div id="content">
+        Slide Toggle/Slide Up/Slide Down
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Slide Toggle
+            $('#slideToggleBtn').click(function() {
+                $('#content').slideToggle();
+            });
+
+            // Slide Up
+            $('#slideUpBtn').click(function() {
+                $('#content').slideUp();
+            });
+
+            // Slide Down
+            $('#slideDownBtn').click(function() {
+                $('#content').slideDown();
+            });
+        });
+    </script>
+</body>
+</html>

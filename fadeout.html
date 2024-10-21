@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .container{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/6.jfif" id="image">
+        <button id="btn">Fadeout</button>
+ 
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#image').fadeOut(3000);
+            });  
+        });
+    </script>
+</body>
+</html>

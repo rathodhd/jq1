@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Password</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #togglePassword {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <span id="togglePassword">👁️</span>
+
+    <script>
+        $(document).ready(function() {
+            $('#togglePassword').click(function() {
+                const passwordField = $('#password');
+                const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+                passwordField.attr('type', type);
+                $(this).text(type === 'password' ? '👁️' : '👁️‍🗨️'); // Change icon/text based on state
+            });
+        });
+    </script>
+</body>
+</html>
